@@ -1,0 +1,128 @@
+body{
+	display: grid;
+	grid-template-areas: 
+	"header header nav nav"
+	"main main main aside"
+	"main main main aside"
+	"main main main aside"
+	"footer footer footer footer";
+}
+
+#headerResponsive{
+	background: grey;
+	grid-area: header;
+	height: 100px;
+}
+
+nav{
+	background: salmon;
+	grid-area: nav;
+	height: 100px;
+}
+
+main{
+	background: gold;
+	grid-area: main;
+}
+
+aside{
+	background: skyblue;
+	grid-area: aside;
+}
+
+footer{
+	background: green;
+	grid-area: footer;
+	height: 100px;
+}
+
+.caja{
+	margin: 0;
+	background: blue;
+	list-style: none;
+	display: flex;
+	/*flex-direction: row;
+	flex-wrap: wrap;*/
+	flex-flow: row nowrap;
+	gap: 10px;
+	justify-content: center;
+	align-items: stretch;
+	/*align-content: center;*/
+}
+
+.caja li{
+	padding: 10px;
+	/*flex: 1 1 100px;*/
+	background: blueviolet;
+}
+
+div{
+	padding: 10px;
+	background: royalblue;
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	/*grid-template-rows: 1fr 3fr 2fr;*/
+	gap: 10px;
+	/*justify-items: end;
+	/*align-items: start;*/
+	place-items: center;
+	/*justify-content: space-evenly;
+	place-content: stretch;*/
+	place-content: center;
+}
+
+div > p{
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid black;
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.item1{
+	/*grid-column-start: 1;
+	grid-column-end: 4;*/
+	grid-column: 1 / 3;
+	grid-row: 2 / span 2;
+	/*justify-self: end;
+	align-self: end;*/
+	place-self: stretch;
+}
+
+@media (100px <= width <= 460px){ /*(min-width: 100px) and (max-width: 460px)*/
+	.caja{
+		background:green;
+		flex-direction: column;
+		align-items: center;
+	}
+	body{
+		grid-template-areas: 
+		"header"
+		"nav"
+		"main"
+		"main"
+		"main"
+		"footer";
+	}
+	aside{display: none;}
+}
+
+@media (461px <= width <= 768px){
+	.caja{
+		background:grey;
+	}
+	body{
+		grid-template-areas: 
+		"header nav"
+		"main aside"
+		"main aside"
+		"main aside"
+		"footer footer";
+	}
+}
+
+@media (769px <= width){
+	.caja{
+		background:gold;
+	}
+}

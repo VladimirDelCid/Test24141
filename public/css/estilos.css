@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Water+Brush&display=swap');
+@import url('responsive.css');
+
+@keyframes ejemplo {
+	0%{
+		background: red;
+		left: 0px;
+		top: 0px;
+	}
+	25%{background: blue; left: 100px;top: 0px;}
+	50%{background: green; left: 100px;top: 100px;}
+	75%{background: violet; left: 0px;top: 100px;}
+	100%{background: red; left: 0px;top: 0px;}
+}
+
+@keyframes ejemplo2{
+	from{width: 100px; height: 100px}
+	to{width: 200px; height: 200px}
+}
+
+* {
+	/*color: rgba(0, 225, 245, 1)*/;
+	font-size: 20px;
+	/*box-sizing: border-box;*/
+}
+
+body{
+	margin: auto;
+	width: 90%;
+}
+
+iframe{display: block; /*visibility: hidden;*/}
+
+circle{color: red;}
+
+header{
+	height: 200px;
+	background: url("../img/CSS.png") no-repeat center;
+	/*background-image: url("../img/CSS.png")
+	background-repeat: no-repeat;
+	background-position: center;*/
+}
+
+#cuadrito{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background: cyan;
+	transition: all 2s 500ms ease;
+	animation: 
+		ejemplo 3s linear 500ms 3 normal forwards,
+		ejemplo2 2s ease 9.5s;
+	/*animation-name: ejemplo;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-delay: 500ms;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;*/
+}
+
+#cuadrito:hover{
+	transform: rotate3d(2, 2, 2, 310deg);
+	/*transform: translate(30px, 30px);
+	transform: rotate(45deg);
+	transform: skew(30deg);*/
+}
+
+div *{
+	margin: 0;
+}
+
+h1{
+	width: 400px;
+	height: 50px;
+	overflow: auto;
+	padding: 10px 20px 30px 40px;
+	padding-bottom: 10px;
+	margin: 10px 20px 30px 40px;
+	border: 2px solid black;
+	/*border-color: red;
+	border-width: 4px;
+	border-style: double;
+	border-top: 2px solid green;
+	border-left-color: blue;
+	border-right-width: 8px;
+	border-bottom-style: dotted;*/
+	border-radius: 50px;
+	border-bottom-left-radius: 0px;
+	box-sizing: border-box;
+	position: sticky;
+	top: 0;
+	left: 200px;
+	/*z-index: -1;
+	transition-property: all;
+	transition-duration: 5s;
+	transition-delay: 500ms;
+	transition-timing-function: ease;*/
+	transition: all 5s 500ms ease;
+}
+
+h1:hover{
+	width: 600px;
+	height: 70px;
+}
+
+
+
+
+main{
+	background: url("../img/HTML.png") no-repeat;
+	background-attachment: fixed;
+}
+
+main p{
+	font-size: 2em;
+	font-style: italic;
+	font-weight: bold;
+	font: 20px normal small-caps Tahoma, Verdana, sans-serif;
+	color: blue;
+	font-family: "Ojuju", sans-serif;
+}
+
+footer{
+
+}
+
+p {
+	color: hotpink;
+}
+
+#abajo{/*color: gold;*/}   
+
+.estudiantes{color: green; font-family: "Water Brush", cursive;}
+
+p.estudiantes{color: yellow;}
+
+body table thead th{color: red;}
+
+th, td{color: blue;}
+
+p{color: red;}
+p:hover{color: blue;}
+p:active{color: violet;}
+p::selection{background: coral;}
+
+li:nth-of-type(2n){color: red;}
+
+/*ul > li{color: black;}
+ul + li{color: red}
+ul ~ li{color: violet}*/
+
+/* SINTAXIS BÁSICA CSS
+
+selector {
+	propiedad: valor;
+	propiedad2: valor2;
+}
+
+/* COMENTARIO
+MULTILINEAL
+
+selector2 {
+	propiedad: valor;
+}
+
+Especificidad:
+!important: 1, 0, 0, 0, 0
+inline: 	0, 1, 0, 0, 0
+id: 		0, 0, 1, 0, 0
+class: 		0, 0, 0, 1, 0
+etiqueta: 	0, 0, 0, 0, 1
+
+Medidas Absolutas:
+px: 1 pixel
+cm: 1 centímetro
+mm: 1 milímetro
+pt: .35 mm - 1/72 in
+in: 1 pulgada
+pc: 12 pt
+
+Medidas Relativas:
+%: 1% relativo al elemento padre
+em: relativo al por defecto del elemento
+rem: relativo al tamaño de letra por defecto del elemento raiz
+
+vw: 1% viewport width (ancho del navegador)
+vh: 1% viewport height (alto del navegador)
+vmin: 1% de la dimensión mas pequeña del navegador
+vmax: 1% de la dimensión mas grande del navegador
+
+ex: relativo a la altura del elemento (casi no se usa)
+ch: relativo a el ancho del caracter 0
+
+ */

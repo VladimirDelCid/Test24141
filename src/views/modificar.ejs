@@ -1,0 +1,18 @@
+<%- include('partials/head') %>
+	<body>
+		<!--h1>Hola desde la vista <%= tituloDePagina %> en EJS!</h1-->
+		<h2>Modificar el Item</h2>
+		<article>
+			<h4>Producto</h4>
+			<h4>Precio</h4>
+			<h4>Descripción</h4>
+		</article>
+		<form action="/modificar?_metodo=PUT" method="POST">
+			<input type="text" name="item" value="<%= registro.nombre %>">
+			<input type="number" name="precio" value="<%= registro.precio %>">
+			<input type="text" name="descripcion" value="<%= registro.descrip %>">
+			<input type="hidden" name="idMod" value="<%= registro.id %>"><br>
+			<img src="/img/<%= registro.descrip %>" width="200">
+			<input type="submit" value="Actualizar">
+		</form>
+<%- include('partials/footer') %>
